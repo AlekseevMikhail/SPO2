@@ -1,0 +1,134 @@
+subroutine "main" in file "test1.in" at 4:17 (defined)
+  with 2 arguments
+  returns int at 4:17
+- Local variables:
+  - #1 int argc at 6:6
+  - #2 string[] argv at 6:12
+  - #3 string y at 14:12
+  - #4 int i at 18:9
+  - #5 int j at 24:9
+  - #6 char x at 30:10
+- Flow graph:
+  - #1 NOP at 6:27
+    - next: #2
+  - #2 EXPR at 7:5
+    - expr -> <expr:call> at 7:5
+      - type -> int at 9:21
+      - subroutine -> subroutine "printf" in file "test.in" at 9:21 (not defined)
+      - args[0] -> <expr:literal> at 7:12
+        - type -> string at 7:12
+        - literal -> <literal:str> "Hello, World!\n" at 7:12
+    - next: #3
+  - #3 COND at 9:5
+    - cond -> <expr:binary> == at 9:9
+      - type -> bool at 9:9
+      - lhs -> <expr:local> at 9:9
+        - type -> int at 6:6
+        - local -> #1 int argc at 6:6
+      - rhs -> <expr:literal> at 9:17
+        - type -> byte at 9:17
+        - literal -> <literal:int> 0 at 9:17
+    - then next: RETURN
+    - else next: #4
+  - #4 EXPR at 14:12
+    - expr -> <expr:binary> = at 14:12
+      - type -> string at 14:5
+      - lhs -> <expr:local> at 14:12
+        - type -> string at 14:5
+        - local -> #3 string y at 14:12
+      - rhs -> <expr:indexer> at 14:16
+        - type -> string at 6:12
+        - value -> <expr:local> at 14:16
+          - type -> string[] at 6:12
+          - local -> #2 string[] argv at 6:12
+        - indices[0] -> <expr:literal> at 14:21
+          - type -> byte at 14:21
+          - literal -> <literal:int> 0 at 14:21
+    - next: #5
+  - #5 EXPR at 18:9
+    - expr -> <expr:binary> = at 18:9
+      - type -> int at 18:5
+      - lhs -> <expr:local> at 18:9
+        - type -> int at 18:5
+        - local -> #4 int i at 18:9
+      - rhs -> <expr:literal> at 18:13
+        - type -> byte at 18:13
+        - literal -> <literal:int> 0 at 18:13
+    - next: #6
+  - #6 COND at 19:5
+    - cond -> <expr:binary> < at 19:12
+      - type -> bool at 19:12
+      - lhs -> <expr:local> at 19:12
+        - type -> int at 18:5
+        - local -> #4 int i at 18:9
+      - rhs -> <expr:literal> at 19:16
+        - type -> byte at 19:16
+        - literal -> <literal:int> 100 at 19:16
+    - then next: #7
+    - else next: #9
+  - #7 EXPR at 20:9
+    - expr -> <expr:call> at 20:9
+      - type -> int at 9:21
+      - subroutine -> subroutine "printf" in file "test.in" at 9:21 (not defined)
+      - args[0] -> <expr:literal> at 20:16
+        - type -> string at 20:16
+        - literal -> <literal:str> "Iteration\n" at 20:16
+    - next: #8
+  - #8 EXPR at 21:9
+    - expr -> <expr:unary> ++ at 21:9
+      - type -> int at 18:5
+      - value -> <expr:local> at 21:11
+        - type -> int at 18:5
+        - local -> #4 int i at 18:9
+    - next: #6
+  - #9 EXPR at 24:9
+    - expr -> <expr:binary> = at 24:9
+      - type -> int at 24:5
+      - lhs -> <expr:local> at 24:9
+        - type -> int at 24:5
+        - local -> #5 int j at 24:9
+      - rhs -> <expr:literal> at 24:13
+        - type -> byte at 24:13
+        - literal -> <literal:int> 0 at 24:13
+    - next: #10
+  - #10 EXPR at 26:9
+    - expr -> <expr:call> at 26:9
+      - type -> int at 9:21
+      - subroutine -> subroutine "printf" in file "test.in" at 9:21 (not defined)
+      - args[0] -> <expr:literal> at 26:16
+        - type -> string at 26:16
+        - literal -> <literal:str> "Iteration\n" at 26:16
+    - next: #11
+  - #11 EXPR at 27:9
+    - expr -> <expr:unary> ++ at 27:9
+      - type -> int at 24:5
+      - value -> <expr:local> at 27:11
+        - type -> int at 24:5
+        - local -> #5 int j at 24:9
+    - next: #12
+  - #12 COND at 25:5
+    - cond -> <expr:binary> < at 28:14
+      - type -> bool at 28:14
+      - lhs -> <expr:local> at 28:14
+        - type -> int at 24:5
+        - local -> #5 int j at 24:9
+      - rhs -> <expr:literal> at 28:18
+        - type -> byte at 28:18
+        - literal -> <literal:int> 100 at 28:18
+    - then next: #10
+    - else next: #13
+  - #13 EXPR at 30:10
+    - expr -> <expr:binary> = at 30:10
+      - type -> char at 30:5
+      - lhs -> <expr:local> at 30:10
+        - type -> char at 30:5
+        - local -> #6 char x at 30:10
+      - rhs -> <expr:literal> at 30:14
+        - type -> char at 30:14
+        - literal -> <literal:char> 'a' at 30:14
+    - next: #14
+  - #14 EXPR at 31:5
+    - expr -> <expr:literal> at 31:5
+      - type -> byte at 31:5
+      - literal -> <literal:int> 0 at 31:5
+    - next: RETURN

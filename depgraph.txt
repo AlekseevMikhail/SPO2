@@ -1,0 +1,6 @@
+Subroutine foo calls:
+- printf from file test.in
+Subroutine main calls:
+- printf from file test.in
+- printf from file test.in
+- printf from file test.in

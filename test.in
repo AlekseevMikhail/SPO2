@@ -1,0 +1,12 @@
+
+int foo(lol);
+
+foo(kek oaoaoa) {
+    printf("kek\n");
+    // 1 == "kek";
+}
+
+int foo(kek oaoaoa);
+
+printf(string text);
+

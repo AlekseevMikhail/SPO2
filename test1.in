@@ -1,0 +1,32 @@
+
+foo(oaoaoa);
+
+int foo(oaoaoa);
+
+main(argc, string[] argv) {
+    printf("Hello, World!\n");
+
+    if (argc == 0) {
+        break;
+    }
+
+    // int x = argv[0];
+    string y = argv[0];
+
+    // x + y;
+
+    int i = 0;
+    while (i < 100) {
+        printf("Iteration\n");
+        ++i;
+    }
+
+    int j = 0;
+    do {
+        printf("Iteration\n");
+        ++j;
+    } while (j < 100);
+
+    char x = 'a';
+    0;
+}

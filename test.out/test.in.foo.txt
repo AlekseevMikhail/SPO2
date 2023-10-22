@@ -1,0 +1,16 @@
+subroutine "foo" in file "test.in" at 2:14 (defined)
+  with 1 arguments
+  returns int at 2:1
+- Local variables:
+  - #1 kek oaoaoa at 4:5
+- Flow graph:
+  - #1 NOP at 4:17
+    - next: #2
+  - #2 EXPR at 5:5
+    - expr -> <expr:call> at 5:5
+      - type -> int at 9:21
+      - subroutine -> subroutine "printf" in file "test.in" at 9:21 (not defined)
+      - args[0] -> <expr:literal> at 5:12
+        - type -> string at 5:12
+        - literal -> <literal:str> "kek\n" at 5:12
+    - next: RETURN

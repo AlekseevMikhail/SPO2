@@ -1,0 +1,5 @@
+subroutine "printf" in file "test.in" at 9:21 (not defined)
+  with 1 arguments
+  returns int at 9:21
+- Local variables:
+  - #1 string text at 11:8
